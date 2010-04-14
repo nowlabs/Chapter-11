@@ -38,7 +38,12 @@
 }
 
 - (NSString *)description {
-	return [@"I am a tire for rain or shine" autorelease];
+	NSMutableString *desc = 
+	[NSMutableString stringWithString:[super description]];
+	[desc appendFormat:
+	 @", RainHandling: %.1f, SnowHandling: %.1f", 
+	 rainHandling, snowHandling];
+	return desc;
 }
 
 @end

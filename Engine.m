@@ -12,7 +12,7 @@
 @implementation Engine
 
 - (NSString *)description {
-	return [@"I am an engine, vrrooom" autorelease];
+	return @"I am an engine, vrrooom";
 }
 
 
