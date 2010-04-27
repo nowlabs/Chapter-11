@@ -14,11 +14,7 @@
 	float snowHandling;
 }
 
-- (void)setRainHandling:(float)newRainHandling;
-- (float)rainHandling;
-
-- (void)setSnowHandling:(float)newSnowHandling;
-- (float)snowHandling;
-
+@property float rainHandling;
+@property float snowHandling;
 
 @end

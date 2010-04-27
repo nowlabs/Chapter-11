@@ -9,12 +9,13 @@ int main (int argc, const char * argv[]) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 
 	Car *car = [[Car alloc] init];
+	[car setName:@"Herbie"];
 	int i;
 	
 	for (i = 0; i < 4; i++) {
 		AllWeatherRadial *tire = [[AllWeatherRadial alloc] init];
-		[tire setRainHandling:20+i];
-		[tire setSnowHandling:28+i];
+		tire.rainHandling = 20+i;
+		tire.snowHandling = 28+i;
 		[car setTire:tire atIndex:i];
 		[tire release];
 	}

@@ -11,6 +11,9 @@
 
 @implementation AllWeatherRadial
 
+@synthesize rainHandling;
+@synthesize snowHandling;
+
 - (id)initWithPressure:(float)newPressure 
 		 andTreadDepth:(float)newTreadDepth {
 	if (self = [super initWithPressure:newPressure 
@@ -21,21 +24,6 @@
 	return self;
 }
 
-- (void)setRainHandling:(float)newRainHandling {
-	rainHandling = newRainHandling;
-}
-
-- (float)rainHandling {
-	return rainHandling;
-}
-
-- (void)setSnowHandling:(float)newSnowHandling {
-	snowHandling = newSnowHandling;
-}
-
-- (float)snowHandling {
-	return snowHandling;
-}
 
 - (NSString *)description {
 	NSMutableString *desc = 

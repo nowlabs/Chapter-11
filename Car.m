@@ -12,6 +12,7 @@
 
 - (id)init {
 	if (self = [super init]) {
+		name = @"Car";
 		tires = [[NSMutableArray alloc] init];
 		int i;
 		for (i = 0; i < 4; i++) {
@@ -31,6 +32,15 @@
 	engine = newEngine;
 } //setEngine
 
+- (NSString *)name {
+	return name;
+} //name
+
+- (void)setName:(NSString *)newName {
+	[name release];
+	name = [newName copy];
+} //setName
+
 - (void)setTire:(Tire *)tire
 		atIndex:(int)index {
 	[tires replaceObjectAtIndex:index withObject:tire];
@@ -42,6 +52,7 @@
 } //tireAtIndex:
 
 - (void)print {
+	NSLog(@"%@ has:", name);
 	NSLog(@"%@", engine);
 	for	(int i = 0; i < 4; i++) {
 		NSLog(@"%@", [self tireAtIndex:i]);
@@ -49,6 +60,7 @@
 } //print
 
 - (void)dealloc {
+	[name release];
 	[tires release];
 	[engine release];
 	[super dealloc];

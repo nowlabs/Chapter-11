@@ -12,12 +12,15 @@
 
 @interface Car : NSObject
 {
+	NSString *name;
 	Engine *engine;
 	NSMutableArray *tires;
 }
 
 - (Engine *)engine;
 - (void)setEngine:(Engine *)newEngine;
+- (NSString *)name;
+- (void)setName:(NSString *)newName;
 - (Tire *)tireAtIndex:(int)index;
 - (void)setTire:(Tire *)tire
 		atIndex:(int)index;
