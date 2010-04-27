@@ -9,7 +9,7 @@ int main (int argc, const char * argv[]) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 
 	Car *car = [[Car alloc] init];
-	[car setName:@"Herbie"];
+	car.name = @"Herbie";
 	int i;
 	
 	for (i = 0; i < 4; i++) {
@@ -21,7 +21,7 @@ int main (int argc, const char * argv[]) {
 	}
    
 	Engine *engine = [[Slant6 alloc] init];
-	[car setEngine:engine];
+	car.engine= engine;
 	[engine release];
 	
 	[car print];

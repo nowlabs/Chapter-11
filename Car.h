@@ -17,10 +17,9 @@
 	NSMutableArray *tires;
 }
 
-- (Engine *)engine;
-- (void)setEngine:(Engine *)newEngine;
-- (NSString *)name;
-- (void)setName:(NSString *)newName;
+@property (copy) NSString *name;
+@property (retain) Engine *engine;
+
 - (Tire *)tireAtIndex:(int)index;
 - (void)setTire:(Tire *)tire
 		atIndex:(int)index;

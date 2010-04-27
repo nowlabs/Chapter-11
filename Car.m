@@ -22,24 +22,8 @@
 	return self;
 }
 
-- (Engine *)engine {
-	return engine;
-} //engine
-
-- (void)setEngine:(Engine *)newEngine {
-	[newEngine retain];
-	[engine release];
-	engine = newEngine;
-} //setEngine
-
-- (NSString *)name {
-	return name;
-} //name
-
-- (void)setName:(NSString *)newName {
-	[name release];
-	name = [newName copy];
-} //setName
+@synthesize name;
+@synthesize engine;
 
 - (void)setTire:(Tire *)tire
 		atIndex:(int)index {
