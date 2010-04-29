@@ -12,7 +12,7 @@
 
 @interface Car : NSObject
 {
-	NSString *name;
+	NSString *appellation;
 	Engine *engine;
 	NSMutableArray *tires;
 }
