@@ -17,8 +17,8 @@
 	NSMutableArray *tires;
 }
 
-@property (copy) NSString *name;
-@property (retain) Engine *engine;
+@property (readwrite, copy) NSString *name;
+@property (readwrite, retain) Engine *engine;
 
 - (Tire *)tireAtIndex:(int)index;
 - (void)setTire:(Tire *)tire
